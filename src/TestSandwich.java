@@ -1,21 +1,24 @@
+import javax.swing.JOptionPane;
 
 public class TestSandwich {
-
+	
 	public static void main(String[] args) {
-		/*
-		 * This class is a program class.
-		 * It WILL include a main() method.
-		 * This program should create two instances of
-		 * Sandwich, and it should demonstrate the
-		 * use of all of the methods encapsulated
-		 * in the Sandwich class.
-		 * 
-		 * Finish off this program by displaying the
-		 * values of each of the fields for each 
-		 * Sandwich instance.
-		 * 
-		 */
-
+		
+		
+		Sandwich mySandwitch = new Sandwich();
+		
+		String breType = JOptionPane.showInputDialog("What Type of bread?");
+		mySandwitch.setBreadType(breType);
+		
+		String mIng = JOptionPane.showInputDialog("What is the Main Ingredient?");
+		mySandwitch.setMainIngred(mIng);
+	
+	    mySandwitch.setPrice();
+	    JOptionPane.showMessageDialog(null, "The Sandwitch on " + mySandwitch.getBreadType() + 
+	    		" bread with " + mySandwitch.getMainIngred() + ". The over all Price is $"
+	    		+ mySandwitch.getPrice()
+	    		);
 	}
 
 }
+
