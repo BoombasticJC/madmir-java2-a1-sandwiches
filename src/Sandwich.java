@@ -1,6 +1,7 @@
 
 public class Sandwich {
 	
+	//Declaring Variables
 	static String breadType;
 	static String mainIngred;
 	static double price;
